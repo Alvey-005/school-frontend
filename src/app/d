@@ -1,0 +1,18 @@
+import React from "react";
+
+const ResponsiveSVG = () => {
+  return (
+    <picture>
+      {/* Desktop: 1024px and up */}
+      <source srcSet="/svgs/desktop.svg" media="(min-width: 1024px)" />
+
+      {/* Tablet: 640px to 1023px */}
+      <source srcSet="/svgs/tablet.svg" media="(min-width: 640px)" />
+
+      {/* Fallback / Mobile */}
+      <img src="/svgs/mobile.svg" alt="Responsive SVG" />
+    </picture>
+  );
+};
+
+export default ResponsiveSVG;
