@@ -35,9 +35,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${outfit.variable} antialiased`}
+        className={`${raleway.variable} ${outfit.variable} antialiased bg-primary-97`}
       >
-        <Announcement />
+        <Announcement className="mx-4 mt-10"/>
         {children}
       </body>
     </html>
