@@ -84,6 +84,7 @@
 
 --breakpoint-3xl: 1920px;
 
+
 }
 
 :root {
@@ -161,5 +162,50 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  @keyframes announcement-slider {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-announcement-slider {
+    animation: announcement-slider linear infinite;
+  }
+   @keyframes announcement-step-x {
+    0% {
+      transform: translateX(0%);
+    }
+    25% {
+      transform: translateX(0%);
+    }
+    30% {
+      transform: translateX(-100%);
+    }
+    55% {
+      transform: translateX(-100%);
+    }
+    60% {
+      transform: translateX(-200%);
+    }
+    85% {
+      transform: translateX(-200%);
+    }
+    90% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(-300%);
+    }
+  }
+
+  .animate-announcement-step-x {
+    animation: announcement-step-x 12s ease-in-out infinite;
   }
 }
