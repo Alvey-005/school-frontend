@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit, Raleway } from "next/font/google";
 import "./globals.css";
-import Announcement from "@/components/layout/announcement";
+import Announcement from "@/components/layout/announcement/announcement";
+import Navbar from "@/components/layout/navbar";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -38,6 +39,7 @@ export default function RootLayout({
         className={`${raleway.variable} ${outfit.variable} antialiased bg-primary-97`}
       >
         <Announcement className="mx-4 xl:mx-12.5 mt-10"/>
+        <Navbar className="mx-4 xl:mx-12.5 mt-10"/>
         {children}
       </body>
     </html>
